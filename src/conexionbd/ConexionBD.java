@@ -23,7 +23,7 @@ public class ConexionBD {
             // creamos statement 
             Statement s=conexion.createStatement();
             // trabajo con las consultas
-            ResultSet rs=s.executeQuery("select * from productos");
+            ResultSet rs=s.executeQuery("select Id, Nombre, Precio from productos");
             while(rs.next()==true){
                 System.out.println(rs.getInt("Id")+" "+rs.getString("Nombre")+" "+rs.getFloat("Precio"));
             }
